@@ -14,7 +14,6 @@
 #include "def.h"
 
 bool uartInit();
-bool uartOpen();
-
+bool uartOpen(uint8_t ch, uint32_t baud);
 
 #endif /* SRC_COMMON_HW_INCLUDE_UART_H_ */

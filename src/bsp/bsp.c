@@ -34,7 +34,7 @@ void bspInit(void)
 	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 */
 	//MX_USB_DEVICE_Init();
-	MX_USART2_UART_Init();
+	//MX_USART2_UART_Init();
 }
 
 void delay(uint32_t ms)
