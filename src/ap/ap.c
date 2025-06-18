@@ -21,12 +21,16 @@ void apInit(void)
 
 void apMain(void)
 {
+	uint32_t pre_time = 0;
+
+	pre_time = millis();
 	while(1)
 	{
+		if (millis() - pre_time >= 500)
 		ledToggle(_DEF_LED1);
 		//CDC_Transmit_FS("test\n", 6);
 		//
-		HAL_UART_Transmit(&huart2, "test\n", 6, 1000);
-		delay(500);
+		HAL_UART_Transmit(&huart2, "test\r\n", 6, 1000);
+		//delay(500);
 	}
 }

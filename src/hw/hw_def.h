@@ -17,4 +17,6 @@
 
 #define _DEF_LED1		0
 
+#define UART_MAX_CH		1
+
 #endif /* SRC_HW_HW_DEF_H_ */
