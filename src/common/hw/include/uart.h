@@ -12,6 +12,7 @@
 #include "hw.h"
 
 #include "def.h"
+#include <stdarg.h>
 
 bool uartInit();
 bool uartOpen(uint8_t ch, uint32_t baud);

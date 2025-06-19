@@ -34,7 +34,7 @@ bool uartOpen(uint8_t ch, uint32_t baud)
 	{
 		case _DEF_UART2:
 			huart2.Instance 			= USART2;
-			huart2.Init.BaudRate		= 115200;
+			huart2.Init.BaudRate		= baud;
 			huart2.Init.WordLength 		= UART_WORDLENGTH_8B;
 			huart2.Init.StopBits 		= UART_STOPBITS_1;
 			huart2.Init.Parity 			= UART_PARITY_NONE;
@@ -58,6 +58,40 @@ bool uartOpen(uint8_t ch, uint32_t baud)
 
 	return ret;
 }
+
+uint8_t uartRead(uint8_t ch)
+{
+
+}
+
+uint32_t uartWrite(uint8_t ch, uint8_t *p_buf, uint32_t length)
+{
+	uint32_t ret = 0;
+	HAL_StatusTypeDef  status;
+
+	switch(ch)
+	{
+		case _DEF_UART2:
+			status = HAL_UART_Transmit(&huart2, p_buf, length, 100);
+			if (status == HAL_OK)
+			{
+				ret = length;
+			}
+			break;
+		default:
+			ret = 0;
+			break;
+	}
+
+	return ret;
+}
+
+
+
+
+
+
+
 
 uint32_t uartPrintf(uint8_t ch, const char *fmt, ...)
 {
