@@ -1,0 +1,4 @@
+../src/common/hw/driver/led.c:19:6:ledInit	40	static
+../src/common/hw/driver/led.c:50:6:ledOn	16	static
+../src/common/hw/driver/led.c:56:6:ledOff	16	static
+../src/common/hw/driver/led.c:62:6:ledToggle	16	static

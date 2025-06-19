@@ -1,0 +1,7 @@
+../src/common/hw/driver/uart.c:17:6:uartInit	2
+../src/common/hw/driver/uart.c:29:6:uartOpen	3
+../src/common/hw/driver/uart.c:62:9:uartRead	1
+../src/common/hw/driver/uart.c:67:10:uartWrite	3
+../src/common/hw/driver/uart.c:96:10:uartPrintf	1
+../src/common/hw/driver/uart.c:118:6:HAL_UART_MspInit	2
+../src/common/hw/driver/uart.c:154:6:HAL_UART_MspDeInit	2
