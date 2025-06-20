@@ -11,6 +11,7 @@
 
 static bool is_open[UART_MAX_CH];
 
+
 UART_HandleTypeDef huart2;
 
 
@@ -41,6 +42,11 @@ bool uartOpen(uint8_t ch, uint32_t baud)
 			huart2.Init.Mode 			= UART_MODE_TX_RX;
 			huart2.Init.HwFlowCtl 		= UART_HWCONTROL_NONE;
 			huart2.Init.OverSampling 	= UART_OVERSAMPLING_16;
+
+
+
+
+
 			if (HAL_UART_Init(&huart2) != HAL_OK)
 			{
 				ret = false;
