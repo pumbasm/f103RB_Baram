@@ -31,6 +31,15 @@ void apMain(void)
 			ledToggle(_DEF_LED1);
 			uartPrintf(_DEF_UART2, "test\r\n");
 		}
+
+		if (uartAvailable(_DEF_UART2) > 0)
+		{
+			uint8_t rx_data;
+
+			rx_data = uartRead(_DEF_UART2);
+			uartPrintf(_DEF_UART2, "Rx: %c %x\r\n", rx_data, rx_data);
+
+		}
 		//CDC_Transmit_FS("test\n", 6);
 		//
 		//HAL_UART_Transmit(&huart2, "test\r\n", 6, 1000);
